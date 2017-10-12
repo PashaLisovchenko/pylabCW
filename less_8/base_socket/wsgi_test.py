@@ -1,8 +1,6 @@
 from wsgiref.simple_server import make_server
 from urllib.parse import parse_qs
 from html import escape
-#WebServerGatewayInterface
-#PEP333
 
 
 def app(environ, start_response):
@@ -22,26 +20,5 @@ def app(environ, start_response):
     # # curl --data "param1=value1&param2=value2" http://localhost:8080/
     # return [('{} = {}\n'.format(k, str(v))).encode('UTF-8') for k, v in m_data.items()]
 
-    # maping regax :Маршрут:
-    # path_inf = 'path/123'
-    # p = path_inf.split('/')
-    # if p[0] = "....":
-    #     p[1] = id_post
-    # elif p[0]
-
 httpserv = make_server('localhost', 8080, app)
 httpserv.serve_forever()
-
-'''
-Укоротитель ссылок
-сделать форму
-input submit -> ссылку
-hash_code
-'''
-'''
-/....redirect на большую ссылку 
-status = '301 ...'
-headers = locatain = "ccылка"
-return []
-/?hash=
-'''
